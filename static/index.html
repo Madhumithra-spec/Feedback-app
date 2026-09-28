@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f2">
+  <title>Feedback | Fieldnotes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Fieldnotes home">
+      <span class="brand-mark" aria-hidden="true">F</span>
+      <span>fieldnotes</span>
+    </a>
+    <span class="topbar-note">A place for honest feedback</span>
+  </header>
+
+  <main class="layout">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR VOICE MATTERS</p>
+      <h1 id="page-title">Good things<br>start with <em>listening.</em></h1>
+      <p class="intro-copy">Share a thought, an idea, or something we could do better. Every note helps us grow.</p>
+      <div class="intro-rule"></div>
+      <p class="intro-footnote">A few thoughtful words can make a real difference.</p>
+    </section>
+
+    <section class="feedback-column" aria-label="Feedback form and responses">
+      <form class="feedback-form" id="feedback-form" novalidate>
+        <div class="form-heading">
+          <div>
+            <p class="section-label">LEAVE A NOTE</p>
+            <h2>What’s on your mind?</h2>
+          </div>
+          <span class="form-index">01 <span>/ 01</span></span>
+        </div>
+
+        <label class="field-label" for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="e.g. Alex Morgan" autocomplete="name" maxlength="80" required>
+
+        <fieldset class="rating-field">
+          <legend class="field-label">Your rating</legend>
+          <div class="rating-options" role="radiogroup" aria-label="Rating from 1 to 5">
+            <label class="rating-option"><input type="radio" name="rating" value="1"><span>1</span></label>
+            <label class="rating-option"><input type="radio" name="rating" value="2"><span>2</span></label>
+            <label class="rating-option"><input type="radio" name="rating" value="3"><span>3</span></label>
+            <label class="rating-option"><input type="radio" name="rating" value="4"><span>4</span></label>
+            <label class="rating-option"><input type="radio" name="rating" value="5"><span>5</span></label>
+          </div>
+          <div class="rating-hints"><span>Needs work</span><span>Excellent</span></div>
+        </fieldset>
+
+        <label class="field-label" for="feedback">Your feedback</label>
+        <textarea id="feedback" name="feedback" rows="4" maxlength="1000" placeholder="Tell us a little more..." required></textarea>
+
+        <div class="form-footer">
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          <button type="submit" id="submit-button">
+            <span>Submit feedback</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </form>
+
+      <section class="responses" aria-labelledby="responses-title">
+        <div class="responses-heading">
+          <div>
+            <p class="section-label">THE COMMUNITY</p>
+            <h2 id="responses-title">Recent notes</h2>
+          </div>
+          <span class="response-count" id="response-count">0 NOTES</span>
+        </div>
+        <div class="feedback-list" id="feedback-list" aria-live="polite">
+          <p class="empty-state">Loading notes...</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>FIELDNOTES FEEDBACK</span>
+    <span>MADE BETTER, TOGETHER</span>
+  </footer>
+</body>
+</html>
